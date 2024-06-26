@@ -15,7 +15,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "rancher-ec2" {
-  ami           = data.aws_ami.ubutu.id
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.medium"
   subnet_id= var.subnet_id
   tags = {
